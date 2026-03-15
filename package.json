@@ -1,22 +1,45 @@
 {
   "name": "reactnative-boilerplate",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "ios": "expo run:ios",
+    "android": "expo run:android",
+    "prebuild": "expo prebuild",
+    "clean": "watchman watch-del-all && rm -rf node_modules && npm install"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@tanstack/react-query": "^5.90.21",
     "expo": "~55.0.6",
+    "expo-constants": "^55.0.7",
+    "expo-linking": "^55.0.7",
+    "expo-router": "^55.0.5",
     "expo-status-bar": "~55.0.4",
+    "expo-system-ui": "^55.0.9",
+    "lucide-react-native": "^0.577.0",
+    "nativewind": "^4.2.2",
     "react": "19.2.0",
-    "react-native": "0.83.2"
+    "react-dom": "19.2.0",
+    "react-hook-form": "^7.71.2",
+    "react-native": "0.83.2",
+    "react-native-gesture-handler": "^2.30.0",
+    "react-native-pager-view": "^8.0.0",
+    "react-native-reanimated": "~4.1.1",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.24.0",
+    "react-native-svg": "15.15.3",
+    "react-native-worklets": "^0.7.4",
+    "tailwindcss": "^3.3.2",
+    "zod": "^4.3.6",
+    "zustand": "^5.0.11"
   },
   "devDependencies": {
-    "@types/react": "~19.2.2",
+    "@types/react": "^19.2.0",
+    "babel-plugin-module-resolver": "^5.0.2",
     "typescript": "~5.9.2"
   },
-  "private": true
+  "private": true,
+  "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f"
 }

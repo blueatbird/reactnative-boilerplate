@@ -1,6 +1,33 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "expo-router": [
+        "./node_modules/expo-router/build/index.d.ts"
+      ],
+      "expo-status-bar": [
+        "./node_modules/expo-status-bar/build/StatusBar.d.ts"
+      ],
+      "react-native": [
+        "./node_modules/react-native/types/index.d.ts"
+      ],
+      "@/*": [
+        "./*"
+      ]
+    },
+    "jsx": "react-native",
+    "moduleResolution": "bundler",
+    "customConditions": [
+      "react-native",
+      "react-native-strict-api"
+    ],
+    "esModuleInterop": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "nativewind-env.d.ts"
+  ]
 }
